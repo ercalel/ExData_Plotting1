@@ -17,7 +17,6 @@ data <- read.table("household_power_consumption.txt", header = T, sep = ";")
 data <- data[data$Date %in% c("1/2/2007","2/2/2007"),]
 
 date_time <- strptime(paste(data$Date, data$Time), "%d/%m/%Y %H:%M:%S")
-global_active_power <- as.numeric(Global_active_power)
 
 # Plot 4
 png("plot4.png", width = 480, height = 480)
